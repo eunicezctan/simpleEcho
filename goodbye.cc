@@ -85,10 +85,7 @@ main(int argc, char **argv)
               // read a request
             memset(buf,0,buflen);
             nread = recv(client,buf,buflen,0);
-            //getCh << buf;
-            //getCh >> getStr;
 
-            //cout << "reading:"<<buf <<endl;
             if (nread == 0)
                 break;
 
@@ -99,17 +96,9 @@ main(int argc, char **argv)
 
             else 
                 send(client, "error\n", strlen("error\n"), 0); 
-              
-
-
 
 
         }
-
-        //if(nread!="hello")
-                 // buf="error\n";
-
-                    // send a response
                
 
         close(client);
